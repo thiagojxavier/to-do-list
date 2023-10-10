@@ -1,0 +1,42 @@
+@media (min-width: 320px) and (max-width: 700px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    label {
+        font-size: 0.6em;
+    }
+
+    main {
+        max-width: 300px;
+    }
+
+    .task-add-area {
+        align-items: center;
+    }
+
+    input[type="text"]  {
+        font-family: var(--font1);
+        padding: 10px;
+        width: 260px;
+        height: 30px;
+    }
+
+    input[type="submit"] {
+        width: 200px;
+        font-size: 0.9em;
+    }
+
+    .popup > .prompt {
+        width: 300px;
+        height: 300px;
+    }
+
+    .task-item {
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 4px;
+        border-radius: 7px;
+        height: 35px;
+    }
+}

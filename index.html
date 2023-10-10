@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is a website for adding tasks to your to-do list">
+
+    <title>To do list</title>
+
+    <link rel="icon" type="image/png" href="./images/checklist.png">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" async>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;800&display=swap" rel="stylesheet" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <header>
+            <h1>To Do List</h1>
+        </header>
+        <div class="task-add-area">
+            <label for="enterTask">enter the task</label>
+            <input type="text" name="task" id="enterTask" minlength="0" maxlength="40">
+        </div>
+        <div class="btn-area">
+            <input type="submit" value="To add" id="submit">
+        </div>
+        <div class="section-list">
+            <i class="bi bi-list-task background"></i>
+            <div class="task-add">
+                <ul id="list">
+                    
+                </ul>
+            </div>
+        </div> 
+    </main>
+    <div class="prompt-to-type-popup-disable" id="notification-alert">
+        <div class="popup">
+            <div class="prompt">
+                <div class="close">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+                <div class="notification">
+                    <i class="bi bi-exclamation-triangle-fill triangle-exclamation" id="close-popup"></i>
+                    <p>please type before adding!</p>
+                </div>
+                <div class="confirm">
+                    <input type="submit" value="OK" id="ok-notification">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
