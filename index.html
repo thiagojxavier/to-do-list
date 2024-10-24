@@ -22,39 +22,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
 </head>
-<body>
-    <main>
-        <header>
-            <h1>To Do List</h1>
+<body class="container">
+    <main class="content-main">
+        <header class="content-main__header">
+            <h1 class="content-main__header__title">To Do List</h1>
         </header>
-        <div class="task-add-area">
-            <label for="enterTask">enter the task</label>
-            <input type="text" name="task" id="enterTask" minlength="0" maxlength="40">
+        <div class="content-main__task-add-area">
+            <label class="content-main__task-add-area__label" for="enterTask">enter the task</label>
+            <input class="content-main__task-add-area__inputTask" type="text" name="task" id="enterTask" minlength="0" maxlength="40">
         </div>
-        <div class="btn-area">
-            <input type="submit" value="To add" id="submit">
+        <div class="content-main__btn-area">
+            <button class="content-main__btn-area__btn" type="submit" id="submit">To Add</button>
         </div>
-        <div class="section-list">
-            <img src="/images/list.svg" alt="Icon list">
-            <div class="task-add">
-                <ul id="list">
+        <div class="content-main__section-list">
+            <img class="content-main__section-list__background" src="/images/list.svg" alt="Icon list">
+            <div class="content-main__section-list__task-add">
+                <ul id="list" class="content-main__section-list__task-add__list">
                     
                 </ul>
             </div>
         </div> 
     </main>
-    <div class="prompt-to-type-popup-disable" id="notification-alert">
-        <div class="popup">
-            <div class="prompt">
-                <div class="close">
+    <div class="content-main__prompt-to-type-popup--disable" id="notification-alert">
+        <div class="content-main__prompt-to-type-popup__popup" id="popup">
+            <div class="content-main__prompt-to-type-popup__popup__prompt">
+                <div class="content-main__prompt-to-type-popup__popup__prompt__close-icon">
                     <i class="bi bi-x-lg"></i>
                 </div>
-                <div class="notification">
-                    <i class="bi bi-exclamation-triangle-fill triangle-exclamation" id="close-popup"></i>
-                    <p>please type before adding!</p>
+                <div class="content-main__prompt-to-type-popup__popup__prompt__notification">
+                    <i class="bi bi-exclamation-triangle-fill triangle-exclamation content-main__prompt-to-type-popup__popup__prompt__notification__triangle-icon" id="close-popup"></i>
+                    <p class="content-main__prompt-to-type-popup__popup__prompt__notification__paragraph">please type before adding!</p>
                 </div>
-                <div class="confirm">
-                    <input type="submit" value="OK" id="ok-notification">
+                <div class="content-main__prompt-to-type-popup__popup__prompt__confirm">
+                    <input class="content-main__prompt-to-type-popup__popup__prompt__confirm__btn-ok" type="submit" value="OK" id="ok-notification">
                 </div>
             </div>
         </div>

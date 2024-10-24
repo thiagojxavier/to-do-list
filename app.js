@@ -2,7 +2,7 @@ const button = document.getElementById('submit');
 const fieldInput = document.getElementById('enterTask');
 const notification = document.getElementById('notification-alert');
 
-const popup = document.querySelector('.popup');
+const popup = document.getElementById('popup');
 const okNotification = document.getElementById('ok-notification');
 const closePopUpIcon = document.getElementById('close-popup');
 
@@ -48,10 +48,10 @@ function addTask () {
 
     createLi(lastItem.itemValue, lastItem.id);
 
-    const listTaskItem = document.querySelector('.animation');
+    const listTaskItem = document.querySelector('.content-main__section-list__task-add__list__task-item--animation');
 
     setTimeout( () => {
-        listTaskItem.classList.remove('animation');
+        listTaskItem.classList.remove('content-main__section-list__task-add__list__task-item--animation');
     }, 500);
 
     clearFieldAfterUse();
@@ -59,9 +59,9 @@ function addTask () {
 
 function createLi(value, id) {
     listTaskElement.innerHTML += 
-        `<li class="task-item animation" id="item-${id}">
-            <p>${value}</p>
-            <i class="bi bi-trash3-fill trash"></i>
+        `<li class="content-main__section-list__task-add__list__task-item content-main__section-list__task-add__list__task-item--animation" id="item-${id}">
+            <p class="content-main__section-list__task-add__list__task-item__paragraph">${value}</p>
+            <i class="bi bi-trash3-fill content-main__section-list__task-add__list__task-item__trash-icon"></i>
         </li>`
 
     removeTask();
@@ -77,31 +77,31 @@ function checkIfFieldIsEmpty(value) {
 }
 
 const showNotification = () => {
-    notification.classList.remove('prompt-to-type-popup-disable');
-    notification.classList.add('prompt-to-type-popup-active');
+    notification.classList.remove('content-main__prompt-to-type-popup--disable');
+    notification.classList.add('content-main__prompt-to-type-popup--active');
 }
 
 function removeNotification (event) {
     event.stopPropagation();
     
-    popup.classList.add('close');
+    popup.classList.add('content-main__prompt-to-type-popup__popup__close');
 
     setTimeout( () => {
-        notification.classList.toggle('prompt-to-type-popup-disable', 'prompt-to-type-popup-active');
+        notification.classList.toggle('content-main__prompt-to-type-popup--disable', 'content-main__prompt-to-type-popup--active');
 
-        popup.classList.remove('close');
+        popup.classList.remove('content-main__prompt-to-type-popup__popup__close');
     }, 200);
 }
 
 function removeTask() {
-    const deleteTask = document.querySelectorAll('.trash');
+    const deleteTask = document.querySelectorAll('.content-main__section-list__task-add__list__task-item__trash-icon');
 
     deleteTask.forEach( item => {
         item.addEventListener('click', () => {
             const getItem = item.parentElement;
 
-            getItem.classList.remove('animation');
-            getItem.classList.add('removing-animation');
+            getItem.classList.remove('content-main__section-list__task-add__list__task-item--animation');
+            getItem.classList.add('content-main__section-list__task-add__list__task-item--removing-animation');
 
             const id = Number(getItem.id.split("-")[1]);
 

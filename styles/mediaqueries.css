@@ -7,6 +7,8 @@
         font-size: 0.6em;
     }
 
+    /* Arrumar css da responsividade para o BEM */
+
     main {
         max-width: 300px;
     }
