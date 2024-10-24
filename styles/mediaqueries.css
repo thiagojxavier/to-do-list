@@ -11,6 +11,10 @@
         max-width: 300px;
     }
 
+    img {
+        width: 320px;
+    }
+
     .task-add-area {
         align-items: center;
     }

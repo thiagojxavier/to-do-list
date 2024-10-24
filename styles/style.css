@@ -7,7 +7,7 @@
 :root {
     --color1: rgb(57, 230, 126);
     --color2: rgb(149, 235, 184);
-    --color3: rgba(149, 235, 183, 0.589);
+    --color3: #95ebb796;
     --color4: rgba(201, 13, 13, 0.884);
     --color5: rgb(31, 30, 30);
     --font1: 'Shantell Sans', cursive;
@@ -55,6 +55,10 @@ p {
     color: var(--color2);
     padding: 10px 0;
     font-family: var(--font1);
+}
+
+img {
+    width: 600px;
 }
 
 .task-add-area {
