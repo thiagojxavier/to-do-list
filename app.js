@@ -20,7 +20,7 @@ fieldInput.addEventListener('keyup', event => {
 popup.addEventListener('click', removeNotification );
 fieldInput.focus();
 
-const localStorageTaskListCondition = JSON.parse(localStorage.getItem('task-list')).length
+const localStorageTaskListCondition = localStorage.getItem('task-item') ? JSON.parse(localStorage.getItem('task-list').length) : null
 
 if(localStorageTaskListCondition) {
     const list = JSON.parse(localStorage.getItem('task-list'));
